@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rewriter — Re-author Your Story. A private narrative therapy companion.">
+  <meta name="theme-color" content="#8B9DC3">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Rewriter">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png">
+  <title>Rewriter — Re-author Your Story</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-logo">
+        <svg viewBox="0 0 80 80" width="64" height="64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="36" stroke="#8B9DC3" stroke-width="2" opacity="0.3"/>
+          <path d="M22 28 Q40 18 58 28 Q58 52 40 60 Q22 52 22 28Z" fill="#8B9DC3" opacity="0.15"/>
+          <path d="M30 38 L36 44 L50 30" stroke="#8B9DC3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M26 55 Q40 62 54 55" stroke="#8B9DC3" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+        </svg>
+      </div>
+      <div class="loading-text">Rewriter</div>
+      <div class="loading-bar"><div class="loading-progress"></div></div>
+    </div>
+    <div id="root"></div>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- Crisis Modal -->
+  <div id="crisis-modal" class="modal-overlay" hidden>
+    <div class="modal-dialog crisis-modal">
+      <button class="modal-close" onclick="document.getElementById('crisis-modal').hidden=true" aria-label="Close">×</button>
+      <div class="crisis-icon">🌿</div>
+      <h2>You're Not Alone</h2>
+      <p>If you're experiencing a mental health crisis, please reach out:</p>
+      <div class="crisis-resources">
+        <a href="tel:988" class="crisis-link">
+          <span class="crisis-link-icon">📞</span>
+          <div>
+            <strong>988 Suicide & Crisis Lifeline</strong>
+            <span>Call or text 988 (US)</span>
+          </div>
+        </a>
+        <a href="sms:741741?body=HOME" class="crisis-link">
+          <span class="crisis-link-icon">💬</span>
+          <div>
+            <strong>Crisis Text Line</strong>
+            <span>Text HOME to 741741</span>
+          </div>
+        </a>
+        <a href="https://iasp.info/resources/Crisis_Centres/" target="_blank" rel="noopener" class="crisis-link">
+          <span class="crisis-link-icon">🌍</span>
+          <div>
+            <strong>International Resources</strong>
+            <span>iasp.info — Crisis centres worldwide</span>
+          </div>
+        </a>
+      </div>
+      <p class="crisis-footer">This app is a therapeutic tool, not a substitute for professional care.</p>
+    </div>
+  </div>
+
+  <!-- Encryption Modal -->
+  <div id="encrypt-modal" class="modal-overlay" hidden>
+    <div class="modal-dialog">
+      <button class="modal-close" id="encrypt-modal-close" aria-label="Close">×</button>
+      <h2 id="encrypt-modal-title">Encrypt Your Story</h2>
+      <p id="encrypt-modal-desc">Enter a passphrase to encrypt your exported data. You'll need this to import it later.</p>
+      <div class="form-group">
+        <label for="encrypt-passphrase">Passphrase</label>
+        <input type="password" id="encrypt-passphrase" class="input" placeholder="Enter a strong passphrase…" autocomplete="new-password">
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-secondary" id="encrypt-modal-cancel">Cancel</button>
+        <button class="btn btn-primary" id="encrypt-modal-confirm">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
