@@ -1,24 +1,5 @@
-# OS
 .DS_Store
 Thumbs.db
-*.swp
-*.swo
-
-# Editor
-.vscode/
-.idea/
-*.code-workspace
-
-# Node (if ever used for tooling)
 node_modules/
-npm-debug.log
-yarn-error.log
-
-# Build / temp
-dist/
-.cache/
+.vscode/
 *.tmp
-
-# Env
-.env
-.env.local
