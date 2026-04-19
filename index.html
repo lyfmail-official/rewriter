@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Rewriter — Re-author Your Story. A private narrative therapy companion unlike anything you've seen.">
+  <meta name="theme-color" content="#0D0B08">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Rewriter">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+  <link rel="icon" type="image/png" href="assets/icons/icon-512.png">
+
+  <!-- Playfair Display (editorial luxury serif) + Crimson Pro (warm literary body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+
+  <title>Rewriter — Re-author Your Story</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Living canvas background — ambient particles, ink veins -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Custom ink-drop cursor -->
+  <div id="cursor" aria-hidden="true">
+    <div class="cursor-drop"></div>
+    <div class="cursor-trail"></div>
+  </div>
+
+  <!-- Skip link -->
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <div id="app">
+
+    <!-- ── CINEMATIC LOADING SCREEN ── -->
+    <div id="loader" class="loader" role="status" aria-label="Loading Rewriter">
+      <div class="loader-inner">
+        <div class="loader-quill" aria-hidden="true">
+          <svg viewBox="0 0 80 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="quill-feather" d="M40 5 C60 5 75 25 72 55 C69 75 55 85 40 115 C25 85 11 75 8 55 C5 25 20 5 40 5Z" fill="url(#featherGrad)" opacity="0.9"/>
+            <path class="quill-spine" d="M40 5 L40 115" stroke="#C9A84C" stroke-width="1" opacity="0.5"/>
+            <path class="quill-nib" d="M36 108 L40 118 L44 108 L40 105 Z" fill="#C9A84C"/>
+            <path class="quill-ink" d="M40 118 L40 130" stroke="#2A6B6B" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+            <defs>
+              <linearGradient id="featherGrad" x1="8" y1="5" x2="72" y2="115" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#E8E0CC"/>
+                <stop offset="50%" stop-color="#C9A84C" stop-opacity="0.4"/>
+                <stop offset="100%" stop-color="#2A6B6B" stop-opacity="0.3"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="loader-lines" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <p class="loader-word">Rewriter</p>
+        <p class="loader-sub">Re-author Your Story</p>
+      </div>
+    </div>
+
+    <!-- ── APP HEADER ── -->
+    <header class="header" id="header" role="banner">
+      <button class="header-mark" id="hdr-home" aria-label="Return to dashboard">
+        <svg width="20" height="20" viewBox="0 0 80 120" fill="none" aria-hidden="true">
+          <path d="M40 2 C60 2 74 22 71 52 C68 72 54 83 40 112 C26 83 12 72 9 52 C6 22 20 2 40 2Z" fill="currentColor" opacity="0.2"/>
+          <path d="M40 2 L40 112" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+          <path d="M26 38 L34 46 L54 26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="header-wordmark">Rewriter</span>
+      </button>
+
+      <div class="header-center" id="hdr-phase" aria-live="polite"></div>
+
+      <nav class="header-nav" aria-label="App controls">
+        <div class="save-pulse" id="save-pulse" aria-live="polite" aria-label="Save status"></div>
+        <button class="hdr-btn" id="hdr-pause" hidden aria-label="Pause — return to dashboard">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="5" y="3" width="4" height="18" rx="1"/><rect x="15" y="3" width="4" height="18" rx="1"/></svg>
+        </button>
+        <button class="hdr-btn" id="hdr-crisis" aria-label="Crisis resources" title="Crisis Resources">🌿</button>
+        <button class="hdr-btn" id="hdr-theme" aria-label="Toggle light/dark mode" title="Toggle theme">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <button class="hdr-btn" id="hdr-settings" aria-label="Settings" title="Settings">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        </button>
+      </nav>
+    </header>
+
+    <!-- ── MAIN ── -->
+    <main id="main" tabindex="-1">
+      <div id="root"></div>
+    </main>
+
+  </div>
+
+  <!-- ════════════════ MODALS ════════════════ -->
+
+  <!-- Crisis -->
+  <div id="modal-crisis" class="modal-veil" role="dialog" aria-modal="true" aria-labelledby="crisis-h" hidden>
+    <div class="modal-tome crisis-tome">
+      <button class="tome-close" data-close="modal-crisis" aria-label="Close">✕</button>
+      <div class="crisis-glyph" aria-hidden="true">🌿</div>
+      <h2 id="crisis-h" class="tome-title">You Are Not Alone</h2>
+      <p class="tome-body">If you're experiencing a crisis right now, please reach out. Help exists, and you deserve it.</p>
+      <div class="crisis-links" role="list">
+        <a href="tel:988" class="crisis-link" role="listitem">
+          <span aria-hidden="true">📞</span>
+          <div><strong>988 Suicide &amp; Crisis Lifeline</strong><span>Call or text 988 — US</span></div>
+        </a>
+        <a href="sms:741741?body=HOME" class="crisis-link" role="listitem">
+          <span aria-hidden="true">💬</span>
+          <div><strong>Crisis Text Line</strong><span>Text HOME to 741741</span></div>
+        </a>
+        <a href="https://iasp.info/resources/Crisis_Centres/" target="_blank" rel="noopener" class="crisis-link" role="listitem">
+          <span aria-hidden="true">🌍</span>
+          <div><strong>International Crisis Centres</strong><span>iasp.info — worldwide</span></div>
+        </a>
+      </div>
+      <p class="crisis-note">Rewriter is a journaling companion, not a substitute for professional care.</p>
+    </div>
+  </div>
+
+  <!-- Passphrase -->
+  <div id="modal-pass" class="modal-veil" role="dialog" aria-modal="true" aria-labelledby="pass-title" hidden>
+    <div class="modal-tome">
+      <button class="tome-close" data-close="modal-pass" aria-label="Close">✕</button>
+      <h2 class="tome-title" id="pass-title">Encrypt Export</h2>
+      <p class="tome-body" id="pass-desc">Enter a strong passphrase. It is <strong>never stored</strong> — you need it to import later.</p>
+      <div class="field-wrap">
+        <label class="field-label" for="pass-input">Passphrase</label>
+        <div class="field-row">
+          <input type="password" id="pass-input" class="field-ink" placeholder="Enter a strong passphrase…" autocomplete="new-password">
+          <button class="ink-btn ghost" id="pass-eye" type="button" aria-label="Toggle visibility">👁</button>
+        </div>
+        <span class="field-note" id="pass-note" role="alert"></span>
+      </div>
+      <div class="tome-actions">
+        <button class="ink-btn ghost" data-close="modal-pass">Cancel</button>
+        <button class="ink-btn gold" id="pass-confirm">Encrypt &amp; Export</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Distress check-in -->
+  <div id="modal-distress" class="modal-veil" role="dialog" aria-modal="true" aria-labelledby="distress-h" hidden>
+    <div class="modal-tome distress-tome">
+      <h2 id="distress-h" class="tome-title">Checking in with you</h2>
+      <p class="tome-body">Your words suggest you may be going through something very hard right now. That takes courage to write. It's okay to pause.</p>
+      <div class="distress-choices">
+        <button class="distress-choice crisis-choice" id="dc-crisis">I need support right now</button>
+        <button class="distress-choice pause-choice" id="dc-pause">I'd like to pause and come back</button>
+        <button class="distress-choice continue-choice" id="dc-continue">I'm okay — continue writing</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirm -->
+  <div id="modal-confirm" class="modal-veil" role="dialog" aria-modal="true" aria-labelledby="confirm-title" hidden>
+    <div class="modal-tome confirm-tome">
+      <h2 class="tome-title" id="confirm-title">Are you sure?</h2>
+      <p class="tome-body" id="confirm-body"></p>
+      <div class="tome-actions">
+        <button class="ink-btn ghost" data-close="modal-confirm">Cancel</button>
+        <button class="ink-btn danger" id="confirm-ok">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast container -->
+  <div id="toasts" role="status" aria-live="polite" aria-atomic="false" class="toast-stage"></div>
+
+  <!-- PWA install banner -->
+  <div id="install-banner" class="install-banner" hidden aria-live="polite">
+    <span class="install-icon" aria-hidden="true">📖</span>
+    <div class="install-text">
+      <strong>Install Rewriter</strong>
+      <span>Your private story, always within reach.</span>
+    </div>
+    <div class="install-actions">
+      <button class="ink-btn gold sm" id="install-yes">Install</button>
+      <button class="ink-btn ghost sm" id="install-no">Later</button>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
