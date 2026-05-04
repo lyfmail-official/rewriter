@@ -12,10 +12,7 @@
   <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
   <link rel="icon" type="image/png" href="assets/icons/icon-512.png">
 
-  <!-- Playfair Display (editorial luxury serif) + Crimson Pro (warm literary body) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+  <!-- Times New Roman (system serif font) -->
 
   <title>Rewriter — Re-author Your Story</title>
   <link rel="stylesheet" href="styles.css">
@@ -191,11 +188,6 @@
   <!-- Living canvas background — ambient particles, ink veins -->
   <canvas id="bg-canvas" aria-hidden="true"></canvas>
 
-  <!-- Custom ink-drop cursor -->
-  <div id="cursor" aria-hidden="true">
-    <div class="cursor-drop"></div>
-    <div class="cursor-trail"></div>
-  </div>
 
   <!-- Skip link -->
   <a href="#main" class="skip-link">Skip to content</a>
@@ -362,6 +354,29 @@
     </div>
   </section>
 
+  <!-- ══════════════════════════════════════════════════════════════
+       FOOTER — LYF Mail Professional Footer
+       ══════════════════════════════════════════════════════════════ -->
+  <footer class="folio-footer" id="folio-footer">
+    <a href="https://lyfmail.com" class="folio-brand" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 80 120" fill="none" aria-hidden="true">
+        <path d="M40 2 C60 2 74 22 71 52 C68 72 54 83 40 112 C26 83 12 72 9 52 C6 22 20 2 40 2Z" fill="currentColor" opacity="0.3"/>
+        <path d="M40 2 L40 112" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+      </svg>
+      Made by LYF Mail
+    </a>
+    <div class="folio-links">
+      <a href="https://lyfmail.com" target="_blank" rel="noopener">lyfmail.com</a>
+      <span class="folio-sep">·</span>
+      <a href="mailto:rewriter@lyfmail.com">rewriter@lyfmail.com</a>
+      <span class="folio-sep">·</span>
+      <button class="folio-crisis-link" id="footer-crisis" type="button" aria-label="Crisis Resources">
+        <span aria-hidden="true">🌿</span> Crisis Resources
+      </button>
+    </div>
+  </footer>
+
+
   <!-- ════════════════ MODALS ════════════════ -->
 
   <!-- Crisis -->
@@ -454,4 +469,5 @@
   <script type="module" src="app.js"></script>
 </body>
 </html>
+
 
