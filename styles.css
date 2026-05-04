@@ -1,3 +1,5 @@
+
+
 /* ══════════════════════════════════════════════════════════════
    REWRITER v3 — THE LIVING MANUSCRIPT
    Aesthetic: Dark Luxury Editorial — ancient manuscript reborn
@@ -1602,41 +1604,7 @@ textarea.field-ink { min-height: 120px; }
 .install-text span   { font-size: 0.75rem; color: var(--text-3); }
 .install-actions { display: flex; gap: var(--s2); flex-shrink: 0; }
 
-/* ══════════════════════
-   FOOTER
-══════════════════════ */
-.folio-footer {
-  text-align: center;
-  padding: var(--s10) var(--s6) var(--s8);
-  border-top: 1px solid var(--border);
-  margin-top: var(--s20);
-  font-family: var(--fell);
-}
 
-.folio-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--s2);
-  font-style: italic;
-  font-size: 0.85rem;
-  color: var(--text-3);
-  text-decoration: none;
-  margin-bottom: var(--s3);
-  transition: color var(--fast);
-}
-.folio-brand:hover { color: var(--gold); text-decoration: none; }
-
-.folio-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--s3);
-  flex-wrap: wrap;
-  font-size: 0.78rem;
-}
-.folio-links a { color: var(--text-3); }
-.folio-links a:hover { color: var(--gold); }
-.folio-sep { color: var(--border-2); }
 
 /* ══════════════════════
    SCROLLBAR
@@ -1652,17 +1620,90 @@ textarea.field-ink { min-height: 120px; }
 
 
 /* ══════════════════════
-   FOOTER CRISIS LINK
+   HIDE DUPLICATE IN-APP FOOTER
 ══════════════════════ */
+#app .folio-footer,
+#root .folio-footer,
+.library ~ .folio-footer,
+.welcome ~ .folio-footer {
+  display: none !important;
+}
+
+/* ══════════════════════
+   FOOTER — PROFESSIONAL LYF MAIL
+══════════════════════ */
+.folio-footer {
+  text-align: center;
+  padding: var(--s10) var(--s6) var(--s8);
+  border-top: 1px solid var(--border);
+  margin-top: var(--s20);
+  font-family: var(--fell);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s3);
+}
+
+.folio-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--text-2);
+  text-decoration: none;
+  transition: color var(--fast);
+}
+.folio-brand:hover {
+  color: var(--gold);
+  text-decoration: none;
+}
+.folio-brand svg {
+  flex-shrink: 0;
+}
+
+.folio-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s2);
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: var(--text-3);
+}
+
+.folio-label {
+  color: var(--text-3);
+  font-style: italic;
+}
+
+.folio-links a {
+  color: var(--text-2);
+  text-decoration: none;
+  transition: color var(--fast);
+}
+.folio-links a:hover {
+  color: var(--gold);
+}
+
+.folio-sep {
+  color: var(--border-2);
+  margin: 0 var(--s1);
+}
+
 .folio-crisis-link {
   background: none;
   border: none;
   color: var(--text-3);
   font-family: inherit;
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   cursor: auto;
   padding: 0;
   transition: color var(--fast);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s1);
+  font-style: italic;
 }
 .folio-crisis-link:hover {
   color: var(--gold);
