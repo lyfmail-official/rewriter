@@ -169,57 +169,6 @@ class AmbientCanvas {
 }
 
 // ═══════════════════════
-// §2 — CUSTOM CURSOR
-// ═══════════════════════
-class InkCursor {
-  constructor() {
-    this.el    = document.getElementById('cursor');
-    this.drop  = this.el.querySelector('.cursor-drop');
-    this.trail = this.el.querySelector('.cursor-trail');
-    this.tx = 0; this.ty = 0; // trail position (lerped)
-    this.mx = 0; this.my = 0; // mouse position
-    this._bind();
-    this._raf();
-  }
-
-  _bind() {
-    document.addEventListener('mousemove', e => {
-      this.mx = e.clientX; this.my = e.clientY;
-      this.el.style.left = `${e.clientX}px`;
-      this.el.style.top  = `${e.clientY}px`;
-    }, { passive: true });
-
-    document.addEventListener('mousedown', () => this.drop.style.transform = 'translate(-50%,-50%) scale(0.7)');
-    document.addEventListener('mouseup',   () => this.drop.style.transform = 'translate(-50%,-50%) scale(1)');
-
-    // Detect hoverable elements
-    const hoverEls = 'button, a, [role="button"], .rune, .codex-entry, .scroll-del, .claim-erase, .guild-dismiss';
-    document.addEventListener('mouseover', e => {
-      if (e.target.closest(hoverEls)) document.body.classList.add('cursor-hover');
-      else document.body.classList.remove('cursor-hover');
-    }, { passive: true });
-
-    // Detect typing
-    document.addEventListener('focusin', e => {
-      if (e.target.matches('input, textarea')) document.body.classList.add('cursor-typing');
-    });
-    document.addEventListener('focusout', () => document.body.classList.remove('cursor-typing'));
-  }
-
-  _raf() {
-    const lerp = (a, b, t) => a + (b - a) * t;
-    const tick = () => {
-      this.tx = lerp(this.tx, this.mx, 0.12);
-      this.ty = lerp(this.ty, this.my, 0.12);
-      this.trail.style.left = `${this.tx - this.mx}px`;
-      this.trail.style.top  = `${this.ty - this.my}px`;
-      requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
-  }
-}
-
-// ═══════════════════════
 // §3 — CRYPTO
 // ═══════════════════════
 const Crypto = {
@@ -686,24 +635,6 @@ class Renderer {
     }
   }
 
-  // ── FOOTER ──────────────────────────────────────
-  _footer() {
-    const f = el('footer', { class:'folio-footer' });
-    f.innerHTML = `
-      <a href="${C.ORG.url}" target="_blank" rel="noopener noreferrer" class="folio-brand">
-        ✦ Made by ${C.ORG.name}
-      </a>
-      <div class="folio-links">
-        <a href="${C.ORG.url}" target="_blank" rel="noopener noreferrer">lyfmail.com</a>
-        <span class="folio-sep" aria-hidden="true">·</span>
-        <a href="mailto:${C.ORG.email}">${C.ORG.email}</a>
-        <span class="folio-sep" aria-hidden="true">·</span>
-        <button class="ink-btn ghost sm" style="padding:0;height:auto;color:var(--text-3)"
-          onclick="Modal.show('modal-crisis')">🌿 Crisis Resources</button>
-      </div>`;
-    return f;
-  }
-
   // ── PHASE WRAPPER ────────────────────────────────
   _wrap(n) {
     const pct  = Math.round(((n-1)/6)*100);
@@ -737,7 +668,7 @@ class Renderer {
     fwd.innerHTML = n < 6 ? 'Continue the story →' : 'Complete My Story ✓';
     nav.appendChild(fwd);
 
-    page.append(nav, this._footer());
+    page.append(nav);
     return page;
   }
 
@@ -812,7 +743,7 @@ class Renderer {
 
     w.querySelector('#w-new').onclick  = () => this.app.startNew();
     w.querySelector('#w-cont').onclick = () => Router.push('dashboard');
-    w.appendChild(this._footer());
+    // footer removed
     return w;
   }
 
@@ -887,7 +818,7 @@ class Renderer {
         </div>`;
     });
 
-    page.appendChild(this._footer());
+    // footer removed
     return page;
   }
 
@@ -1360,7 +1291,7 @@ class Renderer {
     page.querySelector('#sum-export').onclick     = ()=>this.app.exportSingle(false);
     page.querySelector('#sum-export-enc').onclick = ()=>this.app.exportSingle(true);
     page.querySelector('#sum-dash').onclick       = ()=>Router.push('dashboard');
-    page.appendChild(this._footer());
+    // footer removed
     return page;
   }
 
@@ -1423,7 +1354,7 @@ class Renderer {
     page.querySelector('#set-exp-enc')?.addEventListener('click', ()=>this.app.exportAll(true));
     page.querySelector('#set-imp').onclick    = ()=>this.app.importStories();
 
-    page.appendChild(this._footer());
+    // footer removed
     return page;
   }
 }
@@ -1438,7 +1369,7 @@ class App {
     this.rend    = null;
     this.voice   = new Voice();
     this.ambient = null;
-    this.cursor  = null;
+    // cursor removed
     this._pwa    = null;
   }
 
@@ -1447,10 +1378,6 @@ class App {
     this.ambient = new AmbientCanvas();
     this.ambient.start();
 
-    // Custom cursor (non-touch only)
-    if (window.matchMedia('(hover: hover)').matches) {
-      this.cursor = new InkCursor();
-    }
 
     // DB
     await this.db.init();
