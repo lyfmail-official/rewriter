@@ -1,10 +1,10 @@
 /* ══════════════════════════════════════════════════════════════
    REWRITER v3 — THE LIVING MANUSCRIPT
    Aesthetic: Dark Luxury Editorial — ancient manuscript reborn
-   Fonts: Playfair Display · Crimson Pro · IM Fell English
+   Fonts: Times New Roman (system serif)
    ══════════════════════════════════════════════════════════════ */
 
-/* ── Google Fonts via HTML ── */
+/* ── Times New Roman (system font, no external load) ── */
 
 /* ══════════════════════
    DESIGN TOKENS
@@ -43,9 +43,9 @@
   --surface-4:    var(--void-5);
 
   /* ─ Typography ─ */
-  --display:   'Playfair Display', 'Times New Roman', serif;
-  --body:      'Crimson Pro', Georgia, serif;
-  --fell:      'IM Fell English', Georgia, serif;
+  --display:   'Times New Roman', Times, Georgia, serif;
+  --body:      'Times New Roman', Times, Georgia, serif;
+  --fell:      'Times New Roman', Times, Georgia, serif;
   --mono:      'Courier New', Courier, monospace;
   --lh-title:  1.15;
   --lh-body:   1.75;
@@ -133,7 +133,7 @@ body {
   min-height: 100dvh;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  cursor: none; /* custom cursor */
+  cursor: auto; /* custom cursor */
   transition: background 0.6s var(--ease-ink), color 0.4s;
 }
 
@@ -143,7 +143,7 @@ body {
 a { color: var(--gold); text-decoration: none; }
 a:hover { text-decoration: underline; }
 a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
-button { cursor: none; font-family: inherit; border: none; background: none; }
+button { cursor: auto; font-family: inherit; border: none; background: none; }
 input, textarea { font-family: var(--body); }
 h1,h2,h3 { font-family: var(--display); font-weight: 700; line-height: var(--lh-title); color: var(--text); }
 
@@ -160,42 +160,7 @@ h1,h2,h3 { font-family: var(--display); font-weight: 700; line-height: var(--lh-
   opacity: 0.6;
 }
 
-#app { position: relative; z-index: 1; }
-
-/* ══════════════════════
-   CUSTOM CURSOR
-══════════════════════ */
-#cursor {
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: difference;
-}
-
-.cursor-drop {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--gold);
-  transform: translate(-50%, -50%);
-  transition: transform 0.1s, width 0.2s, height 0.2s;
-}
-
-.cursor-trail {
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 1px solid rgba(201,168,76,0.4);
-  transform: translate(-50%, -50%);
-  transition: transform 0.15s var(--ease-out), width 0.3s, height 0.3s, border-color 0.3s;
-}
-
-body.cursor-typing .cursor-drop { width: 3px; height: 16px; border-radius: 1px; }
-body.cursor-typing .cursor-trail { width: 0; height: 0; }
-body.cursor-hover  .cursor-drop  { width: 16px; height: 16px; background: var(--gold-2); }
-body.cursor-hover  .cursor-trail { width: 48px; height: 48px; border-color: var(--gold); }
+#app { position: relative; z-index: 1; will-change: transform; }
 
 /* ══════════════════════
    SKIP LINK
@@ -329,7 +294,7 @@ body.cursor-hover  .cursor-trail { width: 48px; height: 48px; border-color: var(
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: -0.01em;
-  cursor: none;
+  cursor: auto;
   padding: var(--s1) var(--s2);
   border-radius: var(--r-sm);
   transition: color var(--fast);
@@ -386,7 +351,7 @@ body.cursor-hover  .cursor-trail { width: 48px; height: 48px; border-color: var(
   font-size: 0.875rem;
   color: var(--text-3);
   transition: all var(--fast);
-  cursor: none;
+  cursor: auto;
 }
 .hdr-btn:hover { background: var(--surface-2); color: var(--text); }
 
@@ -599,7 +564,7 @@ body.cursor-hover  .cursor-trail { width: 48px; height: 48px; border-color: var(
   font-size: 0.9rem;
   font-weight: 400;
   letter-spacing: var(--ls-wide);
-  cursor: none;
+  cursor: auto;
   transition: all var(--fast) var(--ease-out);
   border: 1px solid transparent;
   position: relative;
@@ -867,7 +832,7 @@ textarea.field-ink { min-height: 120px; }
   align-items: center;
   justify-content: center;
   font-size: 0.8rem;
-  cursor: none;
+  cursor: auto;
   transition: all var(--fast);
 }
 
@@ -901,7 +866,7 @@ textarea.field-ink { min-height: 120px; }
   font-family: var(--body);
   font-size: 0.875rem;
   color: var(--text-2);
-  cursor: none;
+  cursor: auto;
   user-select: none;
   transition: all var(--normal) var(--ease-out);
   position: relative;
@@ -1005,7 +970,7 @@ textarea.field-ink { min-height: 120px; }
   justify-content: center;
   opacity: 0;
   transition: all var(--fast);
-  cursor: none;
+  cursor: auto;
 }
 
 .scroll:hover .scroll-del { opacity: 1; }
@@ -1054,7 +1019,7 @@ textarea.field-ink { min-height: 120px; }
   font-size: 0.8rem;
   opacity: 0;
   transition: opacity var(--fast), color var(--fast);
-  cursor: none;
+  cursor: auto;
   padding: 2px;
 }
 .claim-verse:hover .claim-erase { opacity: 1; }
@@ -1093,7 +1058,7 @@ textarea.field-ink { min-height: 120px; }
 .guild-name { font-size: 0.9rem; font-weight: 500; color: var(--text); }
 .guild-role { font-size: 0.75rem; color: var(--text-3); }
 
-.guild-dismiss { color: var(--text-3); font-size: 0.8rem; opacity: 0; transition: all var(--fast); cursor: none; }
+.guild-dismiss { color: var(--text-3); font-size: 0.8rem; opacity: 0; transition: all var(--fast); cursor: auto; }
 .guild-member:hover .guild-dismiss { opacity: 1; }
 .guild-dismiss:hover { color: var(--crimson); }
 
@@ -1161,7 +1126,7 @@ textarea.field-ink { min-height: 120px; }
   background: linear-gradient(135deg, var(--surface-2), var(--surface-3));
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
-  cursor: none;
+  cursor: auto;
   transition: all var(--normal) var(--ease-out);
   position: relative;
   overflow: hidden;
@@ -1251,7 +1216,7 @@ textarea.field-ink { min-height: 120px; }
   justify-content: center;
   opacity: 0;
   transition: all var(--fast);
-  cursor: none;
+  cursor: auto;
 }
 .codex-entry:hover .codex-del { opacity: 1; }
 .codex-del:hover { background: rgba(139,58,58,0.15); color: var(--crimson); }
@@ -1400,7 +1365,7 @@ textarea.field-ink { min-height: 120px; }
   background: var(--surface-4);
   border: 1px solid var(--border-2);
   border-radius: 22px;
-  cursor: none;
+  cursor: auto;
   transition: background var(--fast), border-color var(--fast);
 }
 
@@ -1509,7 +1474,7 @@ textarea.field-ink { min-height: 120px; }
   align-items: center;
   justify-content: center;
   font-size: 0.8rem;
-  cursor: none;
+  cursor: auto;
   transition: all var(--fast);
 }
 .tome-close:hover { background: var(--surface-4); color: var(--text); }
@@ -1561,7 +1526,7 @@ textarea.field-ink { min-height: 120px; }
 /* Distress */
 .distress-tome { max-width: 380px; }
 .distress-choices { display: flex; flex-direction: column; gap: var(--s2); margin-top: var(--s4); }
-.distress-choice { padding: var(--s4) var(--s5); border-radius: var(--r-md); font-family: var(--body); font-size: 0.9rem; cursor: none; transition: all var(--fast); border: 1px solid var(--border); text-align: left; color: var(--text); }
+.distress-choice { padding: var(--s4) var(--s5); border-radius: var(--r-md); font-family: var(--body); font-size: 0.9rem; cursor: auto; transition: all var(--fast); border: 1px solid var(--border); text-align: left; color: var(--text); }
 .distress-choice.crisis-choice   { background: var(--teal); border-color: var(--teal-2); font-weight: 500; }
 .distress-choice.crisis-choice:hover { background: var(--teal-2); }
 .distress-choice.pause-choice    { background: var(--surface-3); }
@@ -1684,6 +1649,29 @@ textarea.field-ink { min-height: 120px; }
 /* ══════════════════════
    PRINT
 ══════════════════════ */
+
+
+/* ══════════════════════
+   FOOTER CRISIS LINK
+══════════════════════ */
+.folio-crisis-link {
+  background: none;
+  border: none;
+  color: var(--text-3);
+  font-family: inherit;
+  font-size: 0.78rem;
+  cursor: auto;
+  padding: 0;
+  transition: color var(--fast);
+}
+.folio-crisis-link:hover {
+  color: var(--gold);
+}
+.folio-crisis-link:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
 @media print {
   .header, .page-folio, .install-banner, .toast-stage,
   .modal-veil, .ink-btn, .folio-footer, #bg-canvas, #cursor { display: none !important; }
@@ -1706,8 +1694,7 @@ textarea.field-ink { min-height: 120px; }
   .vellum-grid { grid-template-columns: 1fr; }
   .page-folio { flex-wrap: wrap; }
   body { cursor: auto; }
-  #cursor { display: none; }
-}
+  }
 
 /* ══════════════════════
    ROBUSTNESS PATCHES
@@ -1800,7 +1787,7 @@ textarea.field-ink { min-height: 120px; }
   align-items: center;
   gap: var(--s3);
   padding: var(--s4) var(--s5);
-  cursor: none;
+  cursor: auto;
   list-style: none;
   font-family: var(--display);
   font-size: 1.05rem;
@@ -1919,3 +1906,4 @@ textarea.field-ink { min-height: 120px; }
     padding: var(--s3) var(--s4);
   }
 }
+
