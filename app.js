@@ -1418,7 +1418,11 @@ class App {
     qs('#dc-continue').onclick = ()=>Modal.hide('modal-distress');
 
     // Router
-    Router.on(route => this.rend.render(route));
+    Router.on(route => {
+      this.rend.render(route);
+      const faq = document.getElementById('faq');
+      if (faq) faq.hidden = route !== 'welcome';
+    });
 
     // Initial route
     const stories = await this.db.all();
