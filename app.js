@@ -1401,7 +1401,7 @@ class App {
     this.rend = new Renderer(this.state, this);
 
     // Header wiring
-    qs('#hdr-home').onclick    = ()=>{ if(this.state.story) this.db.save(this.state.story); Router.push('dashboard'); };
+    qs('#hdr-home').onclick    = ()=>{ if(this.state.story) this.db.save(this.state.story); Router.push('welcome'); };
     qs('#hdr-crisis').onclick  = ()=>Modal.show('modal-crisis');
     qs('#hdr-settings').onclick= ()=>Router.push('settings');
     qs('#hdr-pause').onclick   = ()=>this.state.pause();
