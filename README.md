@@ -14,23 +14,23 @@ Rewriter is a Progressive Web App (PWA) that guides you through a complete narra
 
 | Phase | Name | What You Do |
 |-------|------|-------------|
-| 1 | **Externalize** | Name the problem, give it form, understand its intent and tactics |
-| 2 | **Map Influence** | See where the problem has power across 4 life domains |
-| 3 | **Deconstruct** | Trace its history and the cultural forces that sustain it |
-| 4 | **Sparkling Moments** | Discover unique outcomes where the problem didn't win |
-| 5 | **Re-author** | Write your alternative story and claim new identity |
-| 6 | **Witness** | Declare your story and build your support team |
+| 1 | **Externalize** | Name the problem, give it form, understand its intent and tactics. |
+| 2 | **Map Influence** | See where the problem has power across 4 life domains. |
+| 3 | **Deconstruct** | Trace its history and the cultural forces that sustain it. |
+| 4 | **Sparkling Moments** | Discover unique outcomes where the problem didn't win. |
+| 5 | **Re-author** | Write your alternative story and claim new identity. |
+| 6 | **Witness** | Declare your story and build your support team. |
 
 ## Features
 
-- 🔒 **100% Private** — IndexedDB storage, zero backend
-- 📴 **Offline-First** — Works without internet after first load
-- 📱 **Installable PWA** — Add to Home Screen on any device
-- 🎙 **Voice Input** — Speak your responses (Web Speech API)
-- 🌙 **Dark Mode** — Easy on the eyes
-- 📤 **Export/Import** — JSON backup with optional AES-256 encryption
-- 🖨 **Print-Ready** — Clean print styles for your story
-- ⌨️ **Keyboard Shortcut** — Ctrl+S / Cmd+S to save
+- 🔒 **100% Private** — IndexedDB storage, zero backend.
+- 📴 **Offline-First** — Works without internet after first load.
+- 📱 **Installable PWA** — Add to Home Screen on any device.
+- 🎙 **Voice Input** — Speak your responses (Web Speech API).
+- 🌙 **Dark Mode** — Easy on the eyes.
+- 📤 **Export/Import** — JSON backup with optional AES-256 encryption.
+- 🖨 **Print-Ready** — Clean print styles for your story.
+- ⌨️ **Keyboard Shortcut** — Ctrl+S / Cmd+S to save.
 
 ## Setup & Deployment
 
@@ -93,3 +93,6 @@ Built by **[LYF Mail](https://lyfmail.com)** · [rewriter@lyfmail.com](mailto:re
 ## License
 
 MIT License — see [LICENSE](LICENSE) for details.
+
+**Maintained by [LYF Mail](https://github.com/lyfmail-official)** · 
+Founded by [Ajay Kumar Chaudhary](https://github.com/lyfmail) 
