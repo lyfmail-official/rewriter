@@ -2,7 +2,7 @@
 
 **Re-author your story. A free, open-source, privacy-first narrative therapy app and mental health writing assistant that guides you through structured therapeutic exercises — all data stays 100% on your device.**
 
-[![Live App](https://img.shields.io/badge/🌱%20Live%20App-rewriter.lyfmail.com-green)](https://lyfmail-official.github.io/rewriter/)
+[![Live App](https://img.shields.io/badge/%F0%9F%8C%B1%20Live%20App-rewriter.lyfmail.com-green)](https://lyfmail-official.github.io/rewriter/)
 [![Privacy First](https://img.shields.io/badge/Privacy-100%25%20Local-blue)](https://lyfmail-official.github.io/rewriter/)
 [![PWA Ready](https://img.shields.io/badge/PWA-Offline--First-orange)](https://lyfmail-official.github.io/rewriter/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/lyfmail-official/rewriter/blob/main/LICENSE)
