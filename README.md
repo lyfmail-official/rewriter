@@ -97,7 +97,7 @@ Each phase includes **guided writing prompts**, **compassionate language suggest
 
 ### For Users (No Technical Knowledge Required)
 
-1. **Visit** [lyfmail-official.github.io/rewriter](https://lyfmail-official.github.io/rewriter/)
+1. **Visit** [rewriter.lyfmail.com](https://rewriter.lyfmail.com)
 2. **No signup required** — open the app and start your narrative therapy journey immediately.
 3. **Begin Phase 1: Externalize** — name your problem and give it form.
 4. **Progress through all 6 phases** at your own pace. Your data saves automatically to your device.
@@ -257,7 +257,7 @@ Rewriter is one of nine free, open-source privacy tools built by [LYF Mail](http
 | **[LYF SOS](https://lyfsos.lyfmail.com)** | Offline emergency safety app for Android. Built for Indian families. | [lyfsos.lyfmail.com](https://lyfsos.lyfmail.com) | `lyfsos` |
 | **[PDPR](https://pdpr.lyfmail.com)** | Public Dark Pattern Registry. Document deceptive UX ethically. | [pdpr.lyfmail.com](https://pdpr.lyfmail.com) | `pdpr` |
 | **[Together](https://together.lyfmail.com)** | Mental health support through therapeutic silence and shared presence. | [together.lyfmail.com](https://together.lyfmail.com) | `together` |
-| **[Offload](https://lyfmail-official.github.io/offload/)** | Stress relief with binaural beats and dream journal. Zero cloud storage. | [lyfmail-official.github.io/offload](https://lyfmail-official.github.io/offload/) | `offload` |
+| **[Offload](https://offload.lyfmail.com/)** | Stress relief with binaural beats and dream journal. Zero cloud storage. | [offload.lyfmail.com](https://offload.lyfmail.com/) | `offload` |
 
 ### 📚 Free Newsletters & Guides
 - [Health & Wellness Guide](https://lyfmail.com/health-wellness-guide)
@@ -293,7 +293,7 @@ You are free to use, modify, and distribute it — including commercially. See [
 ## 📫 Connect With Us
 
 - **🌐 Website:** [lyfmail.com](https://lyfmail.com)
-- **🌱 Rewriter App:** [lyfmail-official.github.io/rewriter](https://lyfmail-official.github.io/rewriter/)
+- **🌱 Rewriter App:** [rewriter.lyfmail.com](https://rewriter.lyfmail.com)
 - **📱 PWA:** [app.lyfmail.com](https://app.lyfmail.com)
 - **📚 Documentation:** [docs.lyfmail.com](https://docs.lyfmail.com)
 - **🎨 Brand Assets:** [github.com/lyfmail-official/lyfmail-brand-assets](https://github.com/lyfmail-official/lyfmail-brand-assets)
@@ -340,7 +340,7 @@ A: No. Rewriter is a journaling and writing companion designed to support mental
 A: No. Rewriter does not use external AI APIs like OpenAI, Google Cloud, or any third-party service. All text processing, narrative therapy guidance, and health content rewriting happens locally in your browser. Future on-device AI features (using TensorFlow.js) will also run entirely locally without network transmission.
 
 **Q: Can I use Rewriter on my phone?**  
-A: Yes. Rewriter is a Progressive Web App (PWA) optimized for mobile, tablet, and desktop. Visit [lyfmail-official.github.io/rewriter](https://lyfmail-official.github.io/rewriter/) on any device, tap "Add to Home Screen," and use it like a native app — fully offline, no app store required.
+A: Yes. Rewriter is a Progressive Web App (PWA) optimized for mobile, tablet, and desktop. Visit [rewriter.lyfmail.com](https://rewriter.lyfmail.com) on any device, tap "Add to Home Screen," and use it like a native app — fully offline, no app store required.
 
 **Q: Does Rewriter support voice input?**  
 A: Yes. Rewriter includes Web Speech API integration, allowing you to speak your responses instead of typing. This is especially helpful for users with motor difficulties, visual impairments, or those who prefer verbal processing. All voice processing happens locally in your browser.
