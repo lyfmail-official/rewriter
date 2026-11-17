@@ -1,232 +1,118 @@
-# Rewriter — Privacy-First Narrative Therapy Companion & AI Health Content Writing Assistant
+# Rewriter — Private Narrative Therapy Writing Companion
 
-**Re-author your story. A free, open-source, privacy-first narrative therapy app and mental health writing assistant that guides you through structured therapeutic exercises — all data stays 100% on your device.**
+**Re-author your story. You are not the problem — the problem is the problem. A free, open-source, privacy-first narrative therapy companion that runs on your device.**
 
-[![Live App](https://img.shields.io/badge/Live%20App-rewriter.lyfmail.com-green)](https://lyfmail-official.github.io/rewriter/)
-[![Privacy First](https://img.shields.io/badge/Privacy-100%25%20Local-blue)](https://lyfmail-official.github.io/rewriter/)
-[![PWA Ready](https://img.shields.io/badge/PWA-Offline--First-orange)](https://lyfmail-official.github.io/rewriter/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/lyfmail-official/rewriter/blob/main/LICENSE)
-[![Maintained by LYF Mail](https://img.shields.io/badge/Maintained%20by-LYF%20Mail-purple)](https://lyfmail.com)
+[![Live App](https://img.shields.io/badge/Live%20App-rewriter.lyfmail.com-teal)](https://rewriter.lyfmail.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](https://github.com/lyfmail-official/rewriter/blob/main/LICENSE)
+[![PWA](https://img.shields.io/badge/PWA-Offline%20%26%20Installable-orange.svg)](https://rewriter.lyfmail.com)
+[![Privacy](https://img.shields.io/badge/Privacy-No%20Cookies%20%C2%B7%20No%20Account-green.svg)](https://rewriter.lyfmail.com)
+[![Maintained by LYF Mail](https://img.shields.io/badge/Maintained%20by-LYF%20Mail-red)](https://lyfmail.com)
 
-**"Re-author Your Story."**  
-A free, open-source narrative therapy tool and mental health writing assistant from [LYF Mail](https://lyfmail.com) — India's privacy-first digital wellness platform.
-
----
-
-## 🌱 What Is Rewriter?
-
-**Rewriter** is a free, open-source, **privacy-first narrative therapy companion** and **AI health content writing assistant** designed to help you re-author your personal story through structured therapeutic writing exercises. Built on the evidence-based framework of **Narrative Therapy** by Michael White & David Epston, Rewriter guides you through a complete six-phase process — from externalizing the problem to writing your alternative story — while ensuring **every piece of data stays 100% on your device**.
-
-Unlike traditional therapy apps or mental health platforms that store your most intimate thoughts on cloud servers, Rewriter follows a **strict zero-backend architecture**. There are no servers. No databases. No tracking. No accounts. Your journal entries, therapy sessions, and personal narratives never leave your browser.
-
-Built by [LYF Mail](https://lyfmail.com), a [privacy-first digital wellness platform](https://lyfmail.com) serving 50,000+ subscribers across India since 2020, Rewriter extends our mission of **"Every Choice Shapes Tomorrow"** into **mental health technology**, **narrative therapy journaling**, and **compassionate health communication**.
+A free project from [LYF Mail](https://lyfmail.com) — India's privacy-first digital wellness platform.
 
 ---
 
-## 🧠 Why Rewriter Exists — The Privacy Crisis in Mental Health Apps
+## ✍️ What Is Rewriter?
 
-Mental health and therapy apps handle the most sensitive personal data imaginable — your fears, traumas, struggles, and innermost thoughts. Yet most platforms:
+**Rewriter** is a free, open-source, **privacy-first narrative therapy companion**. It guides you from **naming what weighs on you** to **writing the story you would rather live in**. There is no feed, no score and no one watching.
 
-| Risk | How It Hurts You | How Rewriter Protects You |
-|------|-----------------|---------------------------|
-| **Cloud Data Storage** | Your therapy journals stored on company servers. | **100% local** — IndexedDB only, zero network transmission. |
-| **Data Monetization** | Sensitive mental health data sold to advertisers. | **Impossible** — no data collection, no analytics, no cookies. |
-| **Account Breaches** | Hacked accounts exposing intimate journal entries. | **No accounts** — no usernames, no passwords, no login. |
-| **Therapist-client Privilege Gaps** | No legal protection for app-stored therapy data. | **Zero backend** — no server means no subpoena, no breach. |
-| **Subscription Paywalls** | Mental health tools locked behind monthly fees. | **Completely free** — MIT licensed, no paywalls, ever. |
+**No email, no account, no server copy of your writing. Stories stay in your browser.** No cookies, ever.
 
-Rewriter exists because **your mental health journey deserves the same privacy as a locked diary** — but with the structure and guidance of professional narrative therapy techniques.
+> *Rewriter is not for emergencies. In India call Tele-MANAS on 14416; elsewhere, find a local helpline.*
+
+Built by [LYF Mail](https://lyfmail.com), a [privacy-first digital wellness platform](https://lyfmail.com) serving 50,000+ subscribers across India since 2020.
 
 ---
 
-## ✨ Key Features
+## 🧭 The Idea Behind Rewriter
 
-### 🔒 100% Private — Zero-Backend Architecture
-- **No servers** — all processing happens locally in your browser.
-- **No cloud storage** — your data lives exclusively in browser IndexedDB.
-- **No tracking** — zero analytics, zero cookies, zero fingerprinting.
-- **No accounts** — no signup, no login, no email, no phone number.
-- **Optional AES-256 encryption** — export your data with a passphrase that is **never stored anywhere**. You alone hold the key.
+*"The person is not the problem; the problem is the problem."* — a founding idea of narrative therapy, associated with Michael White.
 
-### 📴 Offline-First Progressive Web App (PWA)
-- Works **entirely without internet** after first load.
-- Install to your home screen on **iOS, Android, or desktop** — behaves like a native app.
-- No app store required. No permissions demanded. No tracking SDKs.
+Narrative therapy was developed by **Michael White and David Epston**. Its core move is to separate people from their problems, and then to look for the moments the problem did not decide the outcome. Rewriter turns that practice into a **private writing routine**.
 
-### 🎙 Voice Input Support
-- **Web Speech API integration** — speak your responses instead of typing.
-- Perfect for users with motor difficulties, visual impairments, or those who process thoughts better through speech.
-- All voice processing happens locally — no audio sent to any server.
+**A small rewrite:** *"I'm an anxious person."* becomes *"Anxiety visits me, mostly on Sunday nights."*
 
-### 🌙 Dark Mode & Accessible Design
-- **Dark mode** — easy on the eyes for late-night journaling.
-- **High-contrast modes** — accessible for users with visual impairments.
-- **Keyboard shortcuts** — `Ctrl+S` / `Cmd+S` to save instantly.
-- **Print-ready styles** — clean, beautiful formatting for printing your therapeutic story.
-
-### 📤 Export & Import with Encryption
-- **JSON backup** — export your complete narrative therapy journey.
-- **AES-256 encrypted exports** — protect your backup with a strong passphrase.
-- **Import on any device** — restore your sessions seamlessly across devices.
-- **The passphrase is never stored** — you alone control decryption.
-
-### 🖨 Print-Ready Story Output
-- Clean, professional print styles for your completed alternative story.
-- Share with a therapist, keep as a personal milestone, or frame as a reminder of your resilience.
+Rewriter is a companion for reflection, **not a treatment**, and it does not replace professional care.
 
 ---
 
-## 🧩 The 6 Phases of Narrative Therapy
+## 🪜 Six Phases — From Problem to Preferred Story
 
-Rewriter guides you through the complete **evidence-based narrative therapy framework** developed by Michael White & David Epston:
+Each phase has guided prompts, kind language suggestions, and room to stop and come back.
 
-| Phase | Name | What You Do | Therapeutic Goal |
-|-------|------|-------------|------------------|
-| **1** | **Externalize** | Name the problem, give it form, understand its intent and tactics. | Separate your identity from the problem. |
-| **2** | **Map Influence** | See where the problem has power across 4 life domains. | Understand the problem's reach and impact. |
-| **3** | **Deconstruct** | Trace its history and the cultural forces that sustain it. | Uncover how the problem became so powerful. |
-| **4** | **Sparkling Moments** | Discover unique outcomes where the problem didn't win. | Find evidence of your agency and strength. |
-| **5** | **Re-author** | Write your alternative story and claim a new identity. | Construct a preferred, empowering narrative. |
-| **6** | **Witness** | Declare your story and build your support team. | Solidify your new identity with community. |
+| Phase | Time | What you do |
+|-------|------|-------------|
+| **1. Externalize** | 10–15 min | Give the problem a name and a form, so it becomes something you can look at instead of something you are. |
+| **2. Map Influence** | 10–15 min | See where it has reach across self, relationships, life direction and daily living. |
+| **3. Deconstruct** | 10 min | Trace its history and the ideas around you that keep it strong. |
+| **4. Sparkling Moments** | 15–20 min | Find times the problem did not win. These are small proofs of what you value and can do. |
+| **5. Re-author** | 15–20 min | Write the alternative story, in your own words, and claim the identity it points to. |
+| **6. Witness** | 10 min | Declare your story and name the people who could stand beside it. |
 
-Each phase includes **guided writing prompts**, **compassionate language suggestions**, and **reflective exercises** that help you process difficult experiences through structured narrative therapy journaling.
+---
+
+## ✨ Gentle Tools for Hard Days
+
+- 🫶 **A pause when it gets heavy** — if your words suggest you are in real distress, Rewriter stops and checks in, and puts support one tap away.
+- 🔐 **Encrypted backups** — export your story and lock it with a passphrase using AES-256-GCM. We never see or store the passphrase.
+- 🎙️ **Speak instead of type** — optional voice input for when typing is hard. It uses your browser's speech engine, so leave it off if you prefer.
+- 🖨️ **Print your story** — a clean print layout for your finished alternative story, to keep or share with someone you trust.
+- 📴 **Offline and installable** — works without a connection and installs to your home screen, with no app store involved.
+- 🌗 **Light and dark** — switch themes for late-night writing or bright rooms. Your choice is remembered on your device.
+
+---
+
+## 🔒 Built So There Is Nothing to Take
+
+Privacy here is **structure, not a promise**. Rewriter is designed to hold nothing about you.
+
+| Usual therapy app | Rewriter |
+|-------------------|----------|
+| Account, email, phone number | None needed |
+| Journals stored on company servers | No server-side database. Stories stay in your browser. |
+| Analytics, ad SDKs, tracking cookies | None. No third-party scripts or fonts, no cookies, no ads. |
+| Subscriptions and paywalls | Free, MIT licensed, always |
+| Closed code you have to trust | Open source you can read |
 
 ---
 
 ## 🚀 Quick Start Guide
 
-### For Users (No Technical Knowledge Required)
-
-1. **Visit** [rewriter.lyfmail.com](https://rewriter.lyfmail.com)
-2. **No signup required** — open the app and start your narrative therapy journey immediately.
-3. **Begin Phase 1: Externalize** — name your problem and give it form.
-4. **Progress through all 6 phases** at your own pace. Your data saves automatically to your device.
-5. **Install as PWA** — tap "Add to Home Screen" for offline, app-like experience.
-6. **Export your story** — optionally encrypt with AES-256 and back up your therapeutic journey.
+### For Users
+1. **Visit** [rewriter.lyfmail.com](https://rewriter.lyfmail.com) and choose **Begin Rewriting Your Story**. No sign-up.
+2. **Or try the 30-second preview** to see a small rewrite first.
+3. **Work through the six phases** at your own pace, stopping and coming back whenever you like.
+4. **Back up** your story with an encrypted file, and print it when you are ready.
 
 ### For Developers
-
-1. **Clone the repository**
 ```bash
 git clone https://github.com/lyfmail-official/rewriter.git
-```
-
-2. **Serve locally** (any static file server)
-```bash
 cd rewriter
-npx serve .
-# or
-python3 -m http.server 8080
+python -m http.server 8080   # or: npx serve .
 ```
-
-3. **Open in your browser**
-```bash
-http://localhost:8080
-```
-
-4. **No build step required** — pure HTML, CSS, and vanilla JavaScript. Zero dependencies.
-
----
-
-## 📁 Project Structure
-
-```
-rewriter/
-├── index.html          # Single entry point — complete app shell
-├── app.js              # Modular ES2022+ application logic
-│   ├── phases/         # Narrative therapy phase modules
-│   │   ├── externalize.js
-│   │   ├── map-influence.js
-│   │   ├── deconstruct.js
-│   │   ├── sparkling-moments.js
-│   │   ├── re-author.js
-│   │   └── witness.js
-│   ├── storage.js      # IndexedDB local data management
-│   ├── crypto.js       # AES-256 export encryption
-│   ├── voice.js        # Web Speech API integration
-│   └── ui.js           # UI components & accessibility
-├── styles.css          # CSS3 with custom properties & dark mode
-├── manifest.json       # PWA manifest for installability
-├── sw.js               # Service Worker — cache-first offline strategy
-├── assets/
-│   └── icons/          # PWA icons (192x192, 512x512)
-├── docs/
-│   ├── narrative-therapy-framework.md  # Clinical methodology
-│   ├── privacy.md      # Privacy architecture documentation
-│   └── accessibility.md  # Accessibility features & compliance
-├── LICENSE
-├── README.md
-├── CONTRIBUTING.md
-└── CODE_OF_CONDUCT.md
-```
-
-**No build step. No bundler. No framework. Pure web platform.**  
-This architectural simplicity ensures maximum transparency, minimal attack surface, and complete auditability.
-
----
-
-## 🏗️ Architecture & Technical Design
-
-Rewriter is intentionally built with **radical simplicity** to maximize privacy, performance, and transparency:
-
-| Layer | Technology | Purpose |
-|-------|-----------|---------|
-| **Frontend** | HTML5, CSS3, Vanilla JavaScript (ES2022+) | Zero dependencies, zero framework bloat. |
-| **Storage** | Browser IndexedDB | Local, encrypted-at-rest data persistence. |
-| **Encryption** | Web Crypto API (AES-256-GCM) | Client-side export encryption. |
-| **Voice Input** | Web Speech API | Local speech-to-text for accessibility. |
-| **Offline** | Service Worker + Cache API | Full PWA offline functionality. |
-| **Deployment** | Static Site (GitHub Pages) | No server, no backend, no database. |
-
----
-
-## 🔐 Privacy Policy
-
-Rewriter stores all data exclusively in your browser's **IndexedDB**. Nothing is ever transmitted to any server. There are:
-
-- ✅ **No analytics** — we don't know how many people use Rewriter.
-- ✅ **No cookies** — zero tracking technologies.
-- ✅ **No user accounts** — no identity to link to your therapeutic data.
-- ✅ **No cloud backup** — your data lives only where you choose to keep it.
-- ✅ **No external APIs** — no OpenAI, no Google Cloud, no third-party services.
-
-**Your therapeutic journal is as private as a notebook in your drawer.** The only difference is that Rewriter provides the structure of professional narrative therapy — without the surveillance of corporate mental health apps.
+Open `http://localhost:8080`. See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ---
 
 ## 🌍 Who Uses Rewriter?
 
-### 🧠 Individuals in Therapy or Self-Reflection
-People working through anxiety, depression, trauma, or life transitions who want a **structured, private journaling tool** based on clinical narrative therapy techniques.
+### 🌧️ People in a Hard Season
+Anxiety, low mood, burnout or a big life change, with a framework to hold it.
 
-### 🎓 Students & Educators
-Students of psychology, counseling, and social work studying **narrative therapy frameworks** (Michael White & David Epston). Educators teaching therapeutic writing and mental health literacy.
+### 🛋️ People Already in Therapy
+Do the reflective writing between sessions, then share only what you choose to.
 
-### ✍️ Writers & Journalers
-Creative writers and journalers who want to **re-author their personal narratives** through a guided, evidence-based therapeutic framework.
+### 🎓 Students & Counsellors
+Learn the White and Epston framework by working through it step by step.
 
-### 🏥 Healthcare Communicators
-Professionals and patients who need to **rewrite health information into clear, compassionate language** — making medical jargon accessible and emotionally supportive.
+### 📝 Writers & Journalers
+Move from a blank page to a guided arc that ends in a story you can print.
 
-### 🧘 Mindfulness & Wellness Practitioners
-Yoga instructors, meditation teachers, and wellness coaches who want to offer clients a **privacy-first mental health journaling tool** without data collection concerns.
+### 🩺 Health Communicators
+Practise clear, compassionate wording for people facing difficult news.
 
-### 💻 Privacy Advocates & Open-Source Enthusiasts
-Users who refuse to surrender their mental health data to corporate platforms and demand **transparent, auditable, local-first software**.
-
----
-
-## 🗺️ Roadmap & Future Development
-
-Planned enhancements include:
-
-- **🤖 On-Device AI Health Content Rewriting** — Local NLP models to rewrite medical information into compassionate, accessible language (TensorFlow.js, fully on-device).
-- **📊 Narrative Therapy Progress Visualization** — Visual timelines of your therapeutic journey, stored locally.
-- **🌍 Multi-Language Support** — Narrative therapy prompts in Hindi, Tamil, Bengali, and other Indian languages.
-- **♿ Enhanced Accessibility** — Screen-reader optimization, motor-friendly inputs, high-contrast themes.
-- **📱 Enhanced PWA Features** — Push notifications for daily journaling reminders (local only, no server).
-- **🔍 Full-Text Search** — Search across all your journal entries locally.
-- **📤 Encrypted Cloud Sync (Optional)** — Optional, user-controlled, end-to-end encrypted sync for users who choose it.
+### 🔒 Privacy-Minded People
+Open code, no accounts, nothing to breach. Check it for yourself.
 
 ---
 
@@ -234,30 +120,38 @@ Planned enhancements include:
 
 Rewriter welcomes contributions that respect our core principles:
 
-- **Privacy-first** — never introduce server-side components or data collection.
-- **Mental health respectful** — no gamification, no metrics, no social pressure.
-- **Accessibility-focused** — every feature must work for users with disabilities.
-- **Offline-first** — all functionality must work without internet.
-- **Zero-dependency** — prefer vanilla web platform APIs over frameworks.
+- **Privacy-first** — no accounts, no server-side database, no cookies, no third-party scripts or fonts.
+- **Gentle by design** — no scores, streaks or social pressure.
+- **Safety-aware** — keep the pause-when-heavy check-in and crisis resources one tap away.
+- **Honest framing** — Rewriter is a reflection companion, not a treatment.
+- **Privacy-first** — never introduce tracking, analytics or unnecessary data collection.
+- **Accessibility-first** — every feature must work for users with disabilities.
 
-Please read [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) before submitting pull requests.
+Please read [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) before submitting pull requests. To report a vulnerability, see [`SECURITY.md`](SECURITY.md).
 
 ---
 
 ## 🏗️ The LYF Mail Ecosystem
 
-Rewriter is one of nine free, open-source privacy tools built by [LYF Mail](https://lyfmail.com), a [digital wellness platform](https://lyfmail.com) from Varanasi, India, serving 50,000+ subscribers since 2020. Explore our other projects:
+Rewriter is one of **fifteen free privacy-first apps** built by [LYF Mail](https://lyfmail.com), a [digital wellness platform](https://lyfmail.com) from Varanasi, India, serving 50,000+ subscribers since 2020. Browse them all at [lyfmail.com/privacy-first-apps](https://lyfmail.com/privacy-first-apps), or explore our other projects:
 
 | Project | Description | Live App | Repository |
 |---------|-------------|----------|------------|
 | **[LYF Mail](https://lyfmail.com)** | Privacy-first newsletters for health, wealth, career & mindfulness. | [lyfmail.com](https://lyfmail.com) | `lyfmail` |
-| **[TrustLens](https://trustlens.lyfmail.com)** | Detect misinformation before you share. Privacy-first credibility analysis. | [trustlens.lyfmail.com](https://trustlens.lyfmail.com) | `trustlens` |
+| **[LYF Mail App](https://app.lyfmail.com)** | Installable app with newsletters, guides and free tools. | [app.lyfmail.com](https://app.lyfmail.com) | `lyfmail-pwa` |
+| **[Ebb](https://ebb.lyfmail.com)** | Private period and fertility tracker. Data stays on your device. | [ebb.lyfmail.com](https://ebb.lyfmail.com) | `ebb` |
+| **[Together](https://together.lyfmail.com)** | Silent shared presence for calm. No feed, no likes, no chat. | [together.lyfmail.com](https://together.lyfmail.com) | `together` |
+| **[Offload](https://offload.lyfmail.com)** | Pre-sleep brain dump with pink noise, optional binaural beats and a dream journal. | [offload.lyfmail.com](https://offload.lyfmail.com) | `offload` |
+| **[Mnemo](https://mnemo.lyfmail.com)** | Private encrypted second brain with on-device AI search and chat. | [mnemo.lyfmail.com](https://mnemo.lyfmail.com) | `mnemo` |
+| **[Psychelog](https://psychelog.lyfmail.com)** | Encrypted integration journal with on-device insights and therapist export. | [psychelog.lyfmail.com](https://psychelog.lyfmail.com) | `psychelog` |
+| **[Fitrail](https://fitrail.lyfmail.com)** | Encrypted fitness, sleep and workout tracker with route privacy. | [fitrail.lyfmail.com](https://fitrail.lyfmail.com) | `fitrail` |
+| **[TrustLens](https://trustlens.lyfmail.com)** | Check news, links and forwarded messages for misinformation before you share. | [trustlens.lyfmail.com](https://trustlens.lyfmail.com) | `trustlens` |
+| **[LYF SOS](https://lyfsos.lyfmail.com)** | Offline emergency mesh network for Android. Built for India. | [lyfsos.lyfmail.com](https://lyfsos.lyfmail.com) | `lyfsos` |
+| **[PDPR](https://pdpr.lyfmail.com)** | Public Dark-Pattern Registry. Document deceptive UX ethically. | [pdpr.lyfmail.com](https://pdpr.lyfmail.com) | `pdpr` |
 | **[Signals](https://signals.lyfmail.com)** | Privacy-first analytics. Human vs. bot detection without cookies or fingerprinting. | [signals.lyfmail.com](https://signals.lyfmail.com) | `signals` |
-| **[Ebb](https://ebb.lyfmail.com)** | Period tracker with homomorphic encryption. Your data stays encrypted — even from us. | [ebb.lyfmail.com](https://ebb.lyfmail.com) | `ebb` |
-| **[LYF SOS](https://lyfsos.lyfmail.com)** | Offline emergency safety app for Android. Built for Indian families. | [lyfsos.lyfmail.com](https://lyfsos.lyfmail.com) | `lyfsos` |
-| **[PDPR](https://pdpr.lyfmail.com)** | Public Dark Pattern Registry. Document deceptive UX ethically. | [pdpr.lyfmail.com](https://pdpr.lyfmail.com) | `pdpr` |
-| **[Together](https://together.lyfmail.com)** | Mental health support through therapeutic silence and shared presence. | [together.lyfmail.com](https://together.lyfmail.com) | `together` |
-| **[Offload](https://offload.lyfmail.com/)** | Stress relief with binaural beats and dream journal. Zero cloud storage. | [offload.lyfmail.com](https://offload.lyfmail.com/) | `offload` |
+| **[Custos](https://custos.lyfmail.com)** | Local-first guardian for sensitive financial data before it reaches AI. | [custos.lyfmail.com](https://custos.lyfmail.com) | `custos` |
+| **[HireStack](https://hirestack.lyfmail.com)** | Nine free career tools for freelancers and job seekers. Works offline. | [hirestack.lyfmail.com](https://hirestack.lyfmail.com) | `hirestack` |
+| **[Veilora](https://veilora.lyfmail.com)** | Six free tools for creators: clean image metadata, scan text, check before publishing. | [veilora.lyfmail.com](https://veilora.lyfmail.com) | `veilora` |
 
 ### 📚 Free Newsletters & Guides
 - [Health & Wellness Guide](https://lyfmail.com/health-wellness-guide)
@@ -270,30 +164,17 @@ Rewriter is one of nine free, open-source privacy tools built by [LYF Mail](http
 
 ---
 
-## ⚠️ Crisis Resources
-
-Rewriter is a **journaling and narrative therapy companion**, not a replacement for professional mental health care. If you are experiencing a mental health crisis, please reach out immediately:
-
-- **🇮🇳 India — iCall** — Call **022-25521111** or email icall@tiss.edu
-- **🇮🇳 India — Kiran** — Call **1800-599-0019** (24/7 mental health helpline)
-- **🇺🇸 United States — 988 Suicide & Crisis Lifeline** — Call or text **988**
-- **🇺🇸 United States — Crisis Text Line** — Text **HOME** to **741741**
-- **🌍 International** — Find your local crisis center at [iasp.info/resources/Crisis_Centres](https://iasp.info/resources/Crisis_Centres)
-
----
-
 ## 📜 License
 
-Rewriter is released under the **MIT License**.
-
-You are free to use, modify, and distribute it — including commercially. See [`LICENSE`](LICENSE) for full terms.
+Rewriter is released under the **MIT License**. You are free to use, modify and distribute it — including commercially. See [`LICENSE`](LICENSE) for full terms.
 
 ---
 
 ## 📫 Connect With Us
 
 - **🌐 Website:** [lyfmail.com](https://lyfmail.com)
-- **🌱 Rewriter App:** [rewriter.lyfmail.com](https://rewriter.lyfmail.com)
+- **✍️ Rewriter App:** [rewriter.lyfmail.com](https://rewriter.lyfmail.com)
+- **🛠️ All Privacy-First Apps:** [lyfmail.com/privacy-first-apps](https://lyfmail.com/privacy-first-apps)
 - **📱 PWA:** [app.lyfmail.com](https://app.lyfmail.com)
 - **📚 Documentation:** [docs.lyfmail.com](https://docs.lyfmail.com)
 - **🎨 Brand Assets:** [github.com/lyfmail-official/lyfmail-brand-assets](https://github.com/lyfmail-official/lyfmail-brand-assets)
@@ -301,7 +182,6 @@ You are free to use, modify, and distribute it — including commercially. See [
 - **📘 Facebook:** [LYF Mail](https://www.facebook.com/thelyfmail)
 - **▶️ YouTube:** [LYF Mail](https://m.youtube.com/channel/UCurymhWrl2nkvv31uJMuc0g)
 - **💼 LinkedIn:** [LYF Mail](https://www.linkedin.com/company/lyf-mail)
-- **📧 Rewriter Email:** rewriter@lyfmail.com
 - **📧 General Email:** contact@lyfmail.com
 - **🆘 Support:** [support.lyfmail.com](https://support.lyfmail.com)
 
@@ -315,45 +195,36 @@ You are free to use, modify, and distribute it — including commercially. See [
 
 ## 💬 Frequently Asked Questions
 
-**Q: What is Rewriter and how does it work?**  
-A: Rewriter is a free, privacy-first narrative therapy companion and AI health content writing assistant. It guides you through structured narrative therapy exercises based on the framework by Michael White & David Epston, helping you externalize problems, map their influence, and re-author your personal story. All processing happens locally in your browser — your words never leave your device.
+**Q: Is Rewriter therapy?**  
+A: No. Rewriter is a companion for reflection, not a treatment, and it does not replace professional care. If you are in crisis or danger, contact local emergency services. In India, Tele-MANAS is free on 14416.
 
-**Q: Is Rewriter really free to use?**  
-A: Yes. Rewriter is completely free. There are no subscription fees, no hidden charges, and no paywalls. It is an open-source project by [LYF Mail](https://lyfmail.com) committed to making mental wellness tools accessible to everyone.
+**Q: Do I need an account?**  
+A: No. There is no sign-up, no email and no phone number.
 
-**Q: How does Rewriter protect my privacy?**  
-A: Rewriter is built with a privacy-first architecture. All text processing and narrative therapy sessions happen locally in your browser using IndexedDB. No data is sent to external servers, no cookies are used for tracking, and no personal information is collected. You can also encrypt your exports with a passphrase that is never stored anywhere.
+**Q: Where are my stories stored?**  
+A: In your browser, on your device. Rewriter has no server-side database, so there is no server copy of your writing.
 
-**Q: Can I use Rewriter without an internet connection?**  
-A: Yes. Once loaded, Rewriter works entirely offline as a Progressive Web App (PWA). You can install it to your home screen on any device and continue your narrative therapy journaling and rewriting sessions without an active internet connection.
+**Q: Does Rewriter use cookies or analytics?**  
+A: No. There are no cookies, no ads, no analytics and no third-party scripts or fonts.
 
-**Q: What is narrative therapy and how does Rewriter use it?**  
-A: Narrative therapy is a form of counseling developed by Michael White & David Epston that helps people re-author their personal stories by separating themselves from their problems. Rewriter applies this through six structured phases — Externalize, Map Influence, Deconstruct, Sparkling Moments, Re-author, and Witness — with guided writing prompts, compassionate language generation, and reflective exercises.
+**Q: Does voice input stay private?**  
+A: Voice input uses your browser's built-in speech engine. In some browsers that service may send audio to the browser maker, so leave it off and type instead if that matters to you.
 
-**Q: Can I export or backup my Rewriter data?**  
-A: Yes. Rewriter allows you to export your journal entries and narrative therapy sessions as JSON. You can choose to encrypt your export with AES-256 using a strong passphrase for additional security. The passphrase is never stored — you alone hold the key to decrypt your data later.
+**Q: What happens if my writing suggests I'm in distress?**  
+A: Rewriter stops and checks in, and puts support one tap away.
 
-**Q: Is Rewriter a substitute for professional therapy?**  
-A: No. Rewriter is a journaling and writing companion designed to support mental wellness through narrative exercises. It is not a replacement for professional mental health care, licensed therapy, or psychiatric treatment. If you are experiencing a crisis, please use the crisis resources listed above or reach out to a qualified professional.
+**Q: Is Rewriter free and open source?**  
+A: Yes. It is free, MIT licensed and open source, with no paywall.
 
-**Q: Does Rewriter use AI or send my data to AI services?**  
-A: No. Rewriter does not use external AI APIs like OpenAI, Google Cloud, or any third-party service. All text processing, narrative therapy guidance, and health content rewriting happens locally in your browser. Future on-device AI features (using TensorFlow.js) will also run entirely locally without network transmission.
+**Q: Is Rewriter free to use?**  
+A: Yes. Rewriter is free to use under the MIT License, a project by [LYF Mail](https://lyfmail.com).
 
-**Q: Can I use Rewriter on my phone?**  
-A: Yes. Rewriter is a Progressive Web App (PWA) optimized for mobile, tablet, and desktop. Visit [rewriter.lyfmail.com](https://rewriter.lyfmail.com) on any device, tap "Add to Home Screen," and use it like a native app — fully offline, no app store required.
+**Q: Can I contribute to Rewriter?**  
+A: Yes. We welcome developers, designers, writers, translators and accessibility advocates. Please read [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) first.
 
-**Q: Does Rewriter support voice input?**  
-A: Yes. Rewriter includes Web Speech API integration, allowing you to speak your responses instead of typing. This is especially helpful for users with motor difficulties, visual impairments, or those who prefer verbal processing. All voice processing happens locally in your browser.
-
-**Q: Can I print my completed narrative therapy story?**  
-A: Yes. Rewriter includes print-ready CSS styles that format your completed alternative story beautifully for printing. Share it with a therapist, keep it as a personal milestone, or frame it as a reminder of your resilience.
-
-**Q: How can I contribute to Rewriter?**  
-A: We welcome contributions from developers, UX designers, mental health professionals, narrative therapy practitioners, and accessibility advocates. Please read [`CONTRIBUTING.md`](CONTRIBUTING.md) and ensure your contributions respect our privacy-first, zero-backend, offline-first principles.
-
-**Q: What is the difference between Rewriter and other journaling apps like Day One or Journey?**  
-A: Most journaling apps store your entries on cloud servers, require accounts, and may monetize your data. Rewriter is **100% local, zero-backend, account-free, and open-source**. Your mental health data never leaves your device, and you can verify this by auditing our code. We also provide structured narrative therapy guidance rather than blank-page journaling.
+**Q: How do I report a bug or a security issue?**  
+A: Open a [GitHub issue](https://github.com/lyfmail-official/rewriter/issues) for bugs. For security vulnerabilities, **do not** open a public issue — follow [`SECURITY.md`](SECURITY.md).
 
 ---
 
-*This README is maintained by the LYF Mail team. For issues, feature requests, research collaborations, or contributions, please visit our [GitHub repository](https://github.com/lyfmail-official/rewriter).*
+*This README is maintained by the LYF Mail team. For issues, feature requests or contributions, please visit our [GitHub repository](https://github.com/lyfmail-official/rewriter).*
